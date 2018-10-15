@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="cetial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>后台</title>
+    <!--[if lt IE 8]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <link href="/Css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="/Css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="/Css/animate.min.css" rel="stylesheet">
+    <link href="/Css/style.min.css?v=4.0.0" rel="stylesheet">
+    <link href="/Css/paging.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <!-- Panel Other -->
+    <div class="ibox float-e-margins">
+        
+        <div class="ibox-content">
+            <div class="row row-lg">
+                <div class="col-sm-12">
+                    <!-- Example Toolbar -->
+                    <div class="example-wrap">
+                        <div class="example">
+                            <div class="btn-group" role="group">
+                                <a href="/Doctor/adds" class="btn btn-outline btn-default">
+                                    <i class="glyphicon glyphicon-plus" aria-hidden="true"></i> 添加医生
+                                </a>
+                            </div>
+                            <h1>医生管理</h1>
+                            <table data-toggle="table" class="table table-hover"  data-mobile-responsive="true">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th align="center" style="width: 70px;">姓名</th>
+                                        <th align="center" style="width: 70px;">性别</th>
+                                        <th align="center" style="width: 200px;">所在医院</th>
+                                        <th align="center" style="width: 150px;">职称</th>
+                                        <th align="center" style="width: 100px;">科室</th>
+                                        <th align="center" style="width: 70px;">简介</th>
+                                        <th align="center" style="width: 150px;">开始上班时间</th>
+                                        <th align="center" style="width: 150px;">结束上班时间</th>
+                                        <th align="center" style="width: 150px;">级别评定</th>
+                                        <th align="center" style="width: 150px;">创建时间</th>
+
+                                        <th align="center" style="width: 70px;">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   <volist name="results" id="vo">
+                                    <tr target="sid_user" rel="{$vo['id']}">
+                                        <td class="id">{$vo['id']}</td>
+                                        <td>{$vo['realname']}</td>
+                                        <td>{$vo['sex']==1?'男':'女'}</td>
+                                        <td>{$vo['hospital']}</td>
+                                        <td>{$vo['grade']}</td>
+                                        <td>{$vo['department_name']}</td>
+                                        <td style="width:500px;height:20px;overflow: hidden;">{$vo['introduce']}</td>
+                                        <td>{$vo['work_time_start']}</td>
+                                        <td>{$vo['work_time_end']}</td>
+                                        <td>{$vo['evaluate']}</td>
+                                        <td>{$vo['create_time']|date="Y-m-d H:i:s",###}</td>
+                                        <td>
+                                            <a href="/Doctor/edit?id={$vo['id']}">编辑</a>
+                                            <a title="删除" class="btnDel">删除</a>
+                                        </td>
+                                    </tr>
+                                    </volist>
+                                </tbody>
+                            </table>
+                           <div class="paggings">
+                           {$paging}
+                        </div>
+                    </div>
+                </div>    
+                    <!-- End Example Toolbar -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div> 
+<div class="modal fade" id="ajax_container" tabindex="-1" role="dialog" aria-labelledby="ajax_container" aria-hidden="true"> 
+</div>
+<script src="/Js/jquery.min.js?v=2.1.4"></script>
+<script src="/Js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).on('click','.btnDel',function(){
+        if(confirm("确定要删除吗？")){
+            var id=$(this).parent().siblings('.id').text();
+            console.log(id);
+            $.ajax({
+                url:'/Doctor/delete_do', 
+                data:{
+                    "id":id,
+                },
+                type:'get',
+                dataType:"json",
+                success:function(data){
+                    if(data.status){
+                        alert('删除成功');
+                        window.location="/Doctor/lists";
+                    }else{
+                        alert(data.message)
+                    }
+                },
+            });
+        }
+    })
+
+</script>
+</body>

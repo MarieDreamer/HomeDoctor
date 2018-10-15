@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="banner">
+    <swiper autoplay="true" class="swiper" duration="500" indicatorDots="true"  interval="3000" style="height:400rpx">
+        <swiper-item class="swiper-list" >
+            <image class='lunbotuimg' bindtap="" data-idx="" mode="widthFix" src="/images/ys1.jpg"></image>
+        </swiper-item>
+
+        <swiper-item class="swiper-list" >
+            <image class='lunbotuimg' bindtap="" data-idx="" mode="widthFix" src="/images/ys2.jpg"></image>
+        </swiper-item>
+
+        <swiper-item class="swiper-list" >
+            <image class='lunbotuimg' bindtap="" data-idx="" mode="widthFix" src="/images/ys3.jpg"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class='title_long' bindtap="kuaisu">
+  <image class='title_long_image' src='/images/yisheng.png'></image>
+  <view class='title_long_name'>快速问诊</view>
+  <view class='title_long_content'>看病咨询 送药到家</view>
+</view>
+<view class='title_long' bindtap="shangmen">
+  <image class='title_long_image' style='width:92rpx;' src='/images/dizhi.png'></image>
+  <view class='title_long_name'>上门服务</view>
+  <view class='title_long_content'>三甲医生 上门看病</view>
+</view>
+<view class='title_long' bindtap="zhongyi">
+  <image class='title_long_image' style='width:92rpx;' src='/images/zhongyiyao.png'></image>
+  <view class='title_long_name'>中医服务</view>
+  <view class='title_long_content'>上门坐诊 艾灸拔罐</view>
+</view>
+<view bindtap="examinefun" class='title_shot'>
+  <image class='title_shot_image' src='/images/quanke.png'></image>
+  <view class='title_shot_name'>查疾病</view>
+</view>
+<view class='title_shot' bindtap="songyi">
+  <image class='title_shot_image' src='/images/qiche.png'></image>
+  <view class='title_shot_name'>送药到家</view>
+</view>

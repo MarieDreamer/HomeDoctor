@@ -1,0 +1,38 @@
+<view class='doctordiv'>
+  <view class='doctortitle'>
+    <view class='doctorimgdiv'>
+      <image class='doctorimg'  src="/images/wode.png"></image>
+    </view>
+    <view class='doctorname'>XX医生</view>
+    <view class='doctortext'>XX医院，主任</view>
+  </view>
+  <view class='doctortextdiv'>
+    <view class='doctorintroduce'>擅长领域:啦啊啦啦啦XXXXXXX</view>
+  </view>
+</view>
+
+<view class='doctordiv'>
+  <view class='doctortitle'>
+    <view class='doctorimgdiv'>
+      <image class='doctorimg'  src="/images/wode.png"></image>
+    </view>
+    <view class='doctorname'>XX医生</view>
+    <view class='doctortext'>XX医院，主任</view>
+  </view>
+  <view class='doctortextdiv'>
+    <view class='doctorintroduce'>擅长领域:啦啊啦啦啦XXXXXXX</view>
+  </view>
+</view>
+
+<view class='doctordiv'>
+  <view class='doctortitle'>
+    <view class='doctorimgdiv'>
+      <image class='doctorimg'  src="/images/wode.png"></image>
+    </view>
+    <view class='doctorname'>XX医生</view>
+    <view class='doctortext'>XX医院，主任</view>
+  </view>
+  <view class='doctortextdiv'>
+    <view class='doctorintroduce'>擅长领域:啦啊啦啦啦XXXXXXX</view>
+  </view>
+</view>

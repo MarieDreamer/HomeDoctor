@@ -1,0 +1,4 @@
+<!--pages/feedback/feedback.wxml-->
+<view class='title'>反馈问题</view>
+<textarea class='text' placeholder='请输入你想反馈的问题与建议'></textarea>
+<view class='button'>提交</view>

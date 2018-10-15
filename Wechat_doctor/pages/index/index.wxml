@@ -1,0 +1,58 @@
+<view class='orderchoicediv'>
+  <view bindtap="goneworder" class='{{choicedivclass}}'>新订单</view>
+  <view bindtap="conductfun" class='{{conductclass}}'>进行中</view>
+  <view bindtap="gorecord" class='{{choicedivrightclass}}'>历史记录</view>
+</view>
+
+<view  class='{{neworder}}'   wx:for="{{orderinfo}}"  wx:for-item="list" wx:key="key">
+  <view class='tc'></view>
+    <view catchtap="gopatient_case" class='orderdiv' data-st='{{list.id}}' >
+      <view class='ordernamediv'>
+        <view class='orderimg'>
+          <image class='headimg' src="/images/wode_hei.png"></image>
+        </view>
+        <view class='nametext'>姓名：{{list.name}}</view>
+        <view class='agetext'>年龄：{{list.age}}</view>
+        <view class='sextext'>性别：{{list.sex}}</view>
+      </view>
+
+      <view class='symptomtext'>症状：{{list.disease}}</view>
+      <view class='order-text'>
+        <view class='tc2'></view>
+        <view class='symptomtext'>地址：{{list.addres}}</view>
+        <view class='tc2'></view>
+        <!-- <view class='symptomtext'>距离：2km</view> -->
+        <view class='tc2'></view>
+      </view>
+      <!-- 接单按钮 -->
+      <form bindsubmit="formSubmit" >
+        <view class='jiedan'>
+          <view class='jiedan-text'>详情</view>
+        </view>
+      </form>
+    </view>
+</view> 
+
+<view class='{{record}}' wx:for="{{orderinfo}}"  wx:for-item="list" wx:key="key">
+  <view class='tc'></view>
+    <view class='orderdiv'>
+      <view class='ordernamediv'>
+        <view class='orderimg'>
+          <image class='headimg' src="/images/wode_hei.png"></image>
+        </view>
+        <view class='nametext'>姓名：{{list.name}}</view>
+        <view class='agetext'>年龄：{{list.age}}</view>
+        <view class='sextext'>性别：{{list.sex}}</view>
+      </view>
+
+      <view class='symptomtext'>症状：{{list.disease}}</view>
+
+      <view class='tc2'></view>
+      <view class='symptomtext'>地址：{{list.addres}}</view>
+      <view class='tc2'></view>
+      <view class='symptomtext'>接诊次数：1</view>
+      <view class='tc2'></view>
+      <view class='symptomtext'>最近接诊时间：1</view>
+      <view class='tc2'></view>
+    </view>
+</view>

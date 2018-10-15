@@ -1,0 +1,83 @@
+<view class='recorddiv'>
+  <view class='record'>
+    <view class='time'>日期：2018-06-11</view>
+    <view class='name'>姓名：为xx</view>
+    <view class='sex'>姓别：男</view>
+  </view>
+  <view class='record'>
+    <view class='time'>科别：神经内科</view>
+    <view class='lishi'>既往史：XXXXXXXX</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>个人史：xxxxxxxxxxxxxxx</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>症状：无x无无无无无无无无无无无无无无</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>初步诊断：无x无无无无无无无无无无无无无无</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>用药：无x无无无无无无无无无无无无无无</view>
+  </view>
+  <view class='record'>
+    <view class='doctortext'>医生：无x无</view>
+  </view>
+</view>
+<view class='tc'></view>
+
+<view class='recorddiv'>
+  <view class='record'>
+    <view class='time'>日期：2018-06-11</view>
+    <view class='name'>姓名：为xx</view>
+    <view class='sex'>姓别：男</view>
+  </view>
+  <view class='record'>
+    <view class='time'>科别：神经内科</view>
+    <view class='lishi'>既往史：XXXXXXXX</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>个人史：xxxxxxxxxxxxxxx</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>症状：无x无无无无无无无无无无无无无无</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>初步诊断：无x无无无无无无无无无无无无无无</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>用药：无x无无无无无无无无无无无无无无</view>
+  </view>
+  <view class='record'>
+    <view class='doctortext'>医生：无x无</view>
+  </view>
+</view>
+<view class='tc'></view>
+
+<view class='recorddiv'>
+  <view class='record'>
+    <view class='time'>日期：2018-06-11</view>
+    <view class='name'>姓名：为xx</view>
+    <view class='sex'>姓别：男</view>
+  </view>
+  <view class='record'>
+    <view class='time'>科别：神经内科</view>
+    <view class='lishi'>既往史：XXXXXXXX</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>个人史：xxxxxxxxxxxxxxx</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>症状：无x无无无无无无无无无无无无无无</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>初步诊断：无x无无无无无无无无无无无无无无</view>
+  </view>
+  <view class='record'>
+    <view class='personal'>用药：无x无无无无无无无无无无无无无无</view>
+  </view>
+  <view class='record'>
+    <view class='doctortext'>医生：无x无</view>
+  </view>
+</view>
+<view class='tc'></view>

@@ -1,0 +1,33 @@
+<view class='tc'></view>
+<view class='orderdiv'>
+  <view class='hangdiv'>
+    <view class='hangleft'>订单号：23121321</view>
+    <view class='hangright'>接诊医生：啦啦啦</view>
+  </view>
+  <view class='hangdiv'>
+    <view class='hangleft'>诊断检查服务：23121321</view>
+  </view>
+  <view class='hangdiv'>
+    <view class='hangleft'>用药：的撒的撒的32大萨达</view>
+  </view>
+  <view class='hangdiv'>
+    <view class='dihangright'>支付金额：10元</view>
+  </view>
+</view>
+
+<view class='tc'></view>
+<view class='orderdiv'>
+  <view class='hangdiv'>
+    <view class='hangleft'>订单号：23121321</view>
+    <view class='hangright'>接诊医生：啦啦啦</view>
+  </view>
+  <view class='hangdiv'>
+    <view class='hangleft'>诊断检查服务：23121321</view>
+  </view>
+  <view class='hangdiv'>
+    <view class='hangleft'>用药：的撒的撒的32大萨达</view>
+  </view>
+  <view class='hangdiv'>
+    <view class='dihangright'>支付金额：10元</view>
+  </view>
+</view>

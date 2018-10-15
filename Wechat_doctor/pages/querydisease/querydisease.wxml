@@ -1,0 +1,35 @@
+<!--pages/querydisease/querydisease.wxml-->
+<view class="search-bg">
+  <view class="search">
+      <view class="search-rt">
+          <image class='search-image' src="https://cc.hohiw.com/xcximg/search.png"></image>
+          <input bindconfirm="SearchInput" placeholder="请输入疾病查询" placeholderStyle="font-size:24rpx;color:#ccc" type="text"></input>
+      </view>
+  </view>
+</view>
+<view class='tc'></view>
+<view class='selectquery'>
+  <view bindtap='positiongofun' data-id="position" class='selectdiv'>
+    <image class='selectimg' src='/images/neike.png'></image>
+    <view class='selecttext'>部位查询</view>
+  </view>
+  <view bindtap='departmentgofun' data-id="department" class='selectdiv'>
+    <image  class='selectimg' src='/images/yijiuzhen.png'></image>
+    <view class='selecttext'>科室查询</view>
+  </view>
+  <view bindtap='godiseaselookup' data-id="letterchoice" class='selectdiv'>
+    <image class='selectimg' src='/images/neike.png'></image>
+    <view class='selecttext'>首字母查询</view>
+  </view>
+</view>
+<view class='tc2'></view>
+<view class='tc3'></view>
+<view class='selectresult'>
+
+  <view class='selectover' wx:for="{{listsarray}}" wx:for-item="list" wx:key="key">
+    <view class='selectbu'>
+      <view class='selectbutext' bindtap='godiseasedetailed' data-id="{{list.id}}">{{list.name}}</view>
+    </view>
+  </view>
+
+</view>

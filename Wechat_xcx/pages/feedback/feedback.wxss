@@ -1,0 +1,30 @@
+/* pages/feedback/feedback.wxss */
+page{
+  background-color:#F1F1F1;
+}
+.title{
+  color:#808080;
+  font-size:25rpx;
+  padding: 30rpx;
+}
+.text{
+  background-color: white;
+  width: 90%;
+  margin-left: 3%;
+  height: 250rpx;
+  padding-left: 30rpx;
+  padding-top:30rpx;
+  border-radius: 10rpx;
+  box-shadow: #bbb 0rpx 0rpx 20rpx;
+}
+.button{
+  background-color: #1296db;
+  color: white;
+  width: 93%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left:3%;
+  margin-top: 30rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}

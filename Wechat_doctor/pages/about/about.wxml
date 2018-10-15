@@ -1,0 +1,18 @@
+<view class='logodiv'>
+  <image class='logoimg' src="/images/chaxun.png"></image>
+</view>
+<view class='aboutdiv'>
+ <view class='about'>
+  <view class='abouttext'>功能介绍</view>
+  <view class='xian'></view>
+ </view>
+
+ <view class='about'>
+  <view class='abouttext'>意见反馈</view>
+  <view class='xian'></view>
+ </view>
+
+ <view class='about'>
+  <view class='abouttext'>版本更新</view>
+ </view>
+</view>

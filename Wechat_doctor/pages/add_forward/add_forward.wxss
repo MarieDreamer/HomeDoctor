@@ -1,0 +1,48 @@
+.page{
+  padding: 25rpx
+}
+.content{
+  width:700rpx;
+  margin-bottom:20rpx;
+  display:flex;
+  flex-wrap:wrap;
+  font-size: 30rpx;
+}
+
+.text{
+  width: 700rpx;
+  margin-bottom: 40rpx;
+  font-size: 20px;
+}
+
+.forward_item{
+  width:226rpx;
+  height: 226rpx;
+}
+
+.forward_img{
+  width: 206rpx;
+  height: 206rpx;
+}
+.forward{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 10rpx;
+  margin-bottom:40rpx;
+  width: 700rpx;
+}
+.forward_head{
+  font-size:30rpx;
+  display:flex;
+  margin:20rpx 0 20rpx 20rpx;
+  width: 680rpx;
+}
+
+.forward_image{
+  width: 660rpx;
+  margin: 0 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}

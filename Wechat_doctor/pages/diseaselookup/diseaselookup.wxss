@@ -1,0 +1,28 @@
+.section{
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+
+.sectionright{
+  width: 60%;
+  height: 100%;
+  float: right;
+}
+
+.choicediv{
+  height: 80rpx;
+  background-color: #eee;
+}
+
+.choicetextdiv{
+  height: 80rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.choicerightdiv{
+  height: 80rpx;
+  background-color: #FFF;
+}

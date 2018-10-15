@@ -1,0 +1,27 @@
+<view class='div1'>
+  <view class='div1-text'>头像</view>
+  <image class='div1-right' src='/images/jiantou.png'></image>
+  <image class='div1-img'></image>
+</view>
+<view class='div2'>
+  <view class='div2-text'>名字</view>
+  <image class='div1-right1' src='/images/jiantou.png'></image>
+  <view class='div2-name'>梦想十八块腹肌</view>
+</view>
+<view class='div2'>
+  <view class='div2-text'>我的动态</view>
+  <image class='div1-right1' src='/images/jiantou.png'></image>
+</view>
+<view class='div2'>
+  <view class='div2-text'>我的订单</view>
+  <image class='div1-right1' src='/images/jiantou.png'></image>
+</view>
+<view class='div2'>
+  <view class='div2-text'>个人基本信息</view>
+  <image class='div1-right1' src='/images/jiantou.png'></image>
+</view>
+<view class='div2'>
+  <view class='div2-text'>更多</view>
+  <image class='div1-right1' src='/images/jiantou.png'></image>
+</view>
+

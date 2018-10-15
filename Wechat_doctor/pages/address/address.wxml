@@ -1,0 +1,77 @@
+<!--pages/order/order.wxml-->
+<view wx:for="{{addressarray}}" wx:for-item="lists" wx:key="keys" class='addresdiv'>
+<view class='tc'></view>
+  <view class='addrescontent'>
+    <view class='namediv'>姓名：{{lists.name}}</view>
+    <view class='phonediv'>{{lists.phone}}</view>
+  </view>
+  <view class='addres'>地址：{{lists.province}}{{lists.address}}</view>
+  
+  <view class='addresleft'>{{lists.default}}</view>
+</view>
+
+<view wx:for="{{addressdefaultsarray}}" wx:for-item="list" wx:key="key" class='addresdiv'>
+<view class='tc'></view>
+  <view class='addrescontent'>
+    <view class='namediv'>姓名：{{list.name}}</view>
+    <view class='phonediv'>{{list.phone}}</view>
+    
+  </view>
+  <view class='addres'>地址：{{list.province}}{{list.address}}</view>
+  <view class='addresleft'>{{lists.default}}</view>
+  
+  <view catchtap="deletefun" data-deleteid='{{list.id}}' class='addresright'>删除地址</view>
+  <view catchtap="defaultchangefun" data-defaultid='{{list.id}}' class='phonedivright'>设为默认</view>
+</view>
+<view class='tc3'></view>
+
+
+
+<view class='buttondiv'>
+  <view  class='button'>
+    <view catchtap="tijiaofun" class='buttontext'>新增地址</view>
+  </view>
+</view>
+   <!-- <view class='querydiv'></view>   -->
+
+  <view class='{{tianjiaclass}}'>
+    <view class='chadiv'>
+      <image catchtap="tijiaochachafun" class='chachamimg' src='/images/cha.png'></image>
+    </view>
+    <view class='formdiv'>
+    <view class='filldiv'>
+      <input bindinput ="patientphonefun"  placeholder="手机号" class='fillinputdiv'></input>
+    </view>
+  </view>
+  <view class='tc2'></view>
+  <view class='formdiv'>
+    <view class='filldiv'>
+      <input bindinput ="patientnamefun"  placeholder="姓名" class='fillinputdiv'></input>
+    </view>
+  </view>
+
+  <view class='tc2'></view>
+  <view  class='formdiv'>
+    <view catchtap ="tijiaodizhifun" class='filldiv'>
+      <view  class='fillinputdiv'>
+        <view class='dizhitext'>{{dizhixianshi}}</view>
+        <image class='jiantouimg' src='/images/jiantou.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='tc2'></view>
+  <view class='formdiv'>
+    <view class='filldiv'>
+      <input bindinput ="patientcardfun"  placeholder="单元门牌号" class='fillinputdiv'></input>
+    </view>
+  </view>
+
+  <view  class='button'>
+    <view catchtap="tijiaofungo" class='buttontext'>提交</view>
+  </view>
+
+</view>
+
+
+

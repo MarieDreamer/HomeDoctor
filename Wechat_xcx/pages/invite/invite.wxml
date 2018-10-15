@@ -1,0 +1,10 @@
+<!--pages/invite/invite.wxml-->
+<view class='all'>
+    <form bindsubmit="formSubmit">
+    <view class='ipt'>
+        <input class='sudo' name="invite_code" placeholder='请输入邀请码'></input>
+    </view>
+    
+    <button form-type='submit' class='btn_next'>下一步</button>
+    </form>
+</view>

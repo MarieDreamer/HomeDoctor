@@ -1,0 +1,122 @@
+/* pages/shangmen/shangmen.wxss */
+page{
+  background-color: #eee;
+}
+.quick_in{
+  width: 750rpx;
+  height: 200rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.quick_in_title{
+  width: 650rpx;
+  padding: 10rpx 50rpx;
+  font-size: 30rpx;
+}
+.quick_in_name{
+  width: 650rpx;
+  padding: 10rpx 50rpx;
+  font-size: 30rpx;
+}
+.quick_in_name view{
+  float: left;
+  padding: 5rpx 10rpx;
+  border-radius: 5rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  background-color: #1296db;
+  color: #fff;
+}
+.near_dor{
+  width: 750rpx;
+  background-color: #fff;
+}
+.near_dor_title{
+  width: 650rpx;
+  padding: 10rpx 50rpx;
+  font-size: 30rpx;
+}
+.near_dor_lists{
+  height: 260rpx;
+  background-color: #fff;
+  border-bottom: 1rpx #eee solid;
+}
+.near_dor_lists_left{
+  width: 80rpx;
+  padding: 10rpx 0 10rpx 50rpx;
+  float: left;
+}
+.near_dor_lists_image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+.near_dor_lists_right{
+  width: 520rpx;
+  padding: 10rpx 50rpx;
+  float: left;
+  font-size: 25rpx;
+}
+.near_dor_lists_right_fisrt{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.near_dor_lists_right_name{
+  float: left;
+  font-size: 30rpx;
+}
+.near_dor_lists_right_class{
+  margin-left: 20rpx;
+  color: #333;
+  float: left;
+}
+.near_dor_lists_right_second{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.near_dor_lists_right_haoping{
+  color: #999;
+  float: left;
+}
+.near_dor_lists_right_haopinglu{
+  margin-left: 20rpx;
+  color: goldenrod;
+  float: left;
+}
+.near_dor_lists_right_guanzhu{
+  margin-left: 20rpx;
+  color: #999;
+  float: left;
+}
+.near_dor_lists_right_guanzhushu{
+  margin-left: 20rpx;
+  color: goldenrod;
+  float: left;
+}
+.near_dor_lists_right_like{
+  line-height: 40rpx;
+  color: #999;
+}
+.near_dor_lists_right_third{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.near_dor_lists_right_title{
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  padding: 5rpx 10rpx;
+  border-radius: 5rpx;
+  background-color: #1296db;
+  color: #fff;
+  opacity:0.7;
+  float: left;
+}
+.near_dor_lists_right_money{
+  height: 40rpx;
+  line-height: 40rpx;
+  float: right;
+  color: goldenrod;
+  margin-top: 25rpx;
+  font-size: 35rpx;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>后台</title>
+    <link href="/Css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="/Css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="/Css/animate.min.css" rel="stylesheet">
+    <link href="/Css/style.min.css?v=4.0.0" rel="stylesheet">
+
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                	<div class="form-horizontal m-t" id="commentForm">
+                    <form method="post" action="/EmployeeSystem/adds_do" class="pageForm required-validate" onsubmit="return validateCallback(this,dialogAjaxDone)">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">账号：</label>
+                            <div class="col-sm-8">
+                                <input type="text" size="30" name="account" size="80" minlength="6" maxlength="60" class="form-control"  id="account"/>
+                                <span class="info"> 请输入6-20字符 密码默认123456 如需修改请创建后重置密码即可</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">密码：</label>
+                            <div class="col-sm-8">
+                                <input type="password" size="30" name="password" size="20" minlength="2" maxlength="10" class="form-control" id="password"/>
+                                <span class="info"> 请输入6-10字符</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">确认密码：</label>
+                            <div class="col-sm-8">
+                                <input type="password" size="30" name="password_repeat" size="20" minlength="2" maxlength="10" class="form-control" id="password_repeat"/>
+                                <span class="info"> 请输入上述密码</span>
+                            </div>
+                        </div>
+                        
+                       	<div class="form-group">
+                            <label class="col-sm-2 control-label">姓名：</label>
+                            <div class="col-sm-8">
+                                <input type="text" size="30" name="name" size="20" minlength="2" maxlength="10" class="form-control" id="name"/>
+                                <span class="info"> 请输入2-10字符</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">排序：</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="sort" minlength="1" maxlength="4" size="4" value="0" class="form-control" id="sort"/>
+                                <span class="info">请输入1-4位数字</span>
+                            </div>
+                        </div>
+                        
+                         <div class="form-group rem" attr_value='1' >
+                            <label class="col-sm-2 control-label">部门：</label>
+                            <div class="col-sm-8">
+                                    <select class="form-control department" >
+                                        <option value ="-1">请选择</option>
+                                        <?php foreach ($department as $key => $value) {?>
+                                        <option class="op" value ="<?php echo $value['id'];?>">
+                                        <?php echo $value['name'];?>
+                                        </option>
+                                    <?php } ?>
+                                    </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">角色：</label>
+                            <div class="col-sm-8">
+                                    <select class="role form-control">
+                                    <?php foreach ($role as $key => $value) {?>
+                                        <option value ="<?php echo $value['id'];?>">
+                                            <?php echo $value['name'];?>
+                                        </option>
+                                    <?php } ?>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-3">
+                                <button class="btn btn-primary" type="button" id="adds">提交</button>
+                                <a href="/EmployeeSystem/lists"><button type="button" class="btn btn-dafult">取消</button></a>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+       
+    </div>
+</div>
+<script src="/Js/jquery.min.js?v=2.1.4"></script>
+<script type="text/javascript">
+    $(function(){
+        $(document).on('click','#adds',function(){
+            var account=$('#account').val();
+            var name=$('#name').val();
+            var sort=$('#sort').val();
+            var password_repeat=$('#password_repeat').val();
+            var password=$('#password').val();
+            var department_id=$('.department option:selected').val();
+            var role_id=$('.role option:selected').val();
+            var max_department_id=-1;
+             $(".op").each(function(){
+                department_id=$(this).attr('value');
+                if(department_id>=max_department_id){
+                    max_department_id=department_id;
+                }
+            });
+            $.ajax({
+                url:'/EmployeeSystem/adds_do', 
+                data:{
+                    "account":account,
+                    "name":name,
+                    "sort":sort,
+                    "password":password,
+                    "password_repeat":password_repeat,
+                    "department_id":max_department_id,
+                    "role_id":role_id
+                },
+                type:'post',
+                dataType:"json",
+                success:function(data){
+                    if(data.status){
+                        alert('添加成功');
+                        window.location="/EmployeeSystem/lists";
+                    }else{
+                        alert(data.message)
+                    }
+                },
+            });
+        });
+        $(document).on('change','.department',function(){
+            var that=$(this)
+            var attr_value=that.parent().parent('.form-group').attr('attr_value');
+            console.log(attr_value);
+            
+            $(".rem").each(function(){
+                attrvalue=$(this).attr("attr_value");
+                // console.log(attrvalue);
+                if (attrvalue>attr_value) {
+                    $(this).remove();
+                };
+            });
+            var department_id=$(this).val();
+            attr_value++;
+            $.ajax({
+                url:'/Department/get_do', 
+                data:{
+                    "department_id":department_id
+                },
+                type:'post',
+                dataType:"json",
+                success:function(data){
+                    if(data.status){
+                        if (data.results) {
+                            console.log(data);
+                           var html_de='<div class="form-group rem" attr_value='+attr_value+'><label class="col-sm-2 control-label"></label><div class="col-sm-8"><select class="form-control department"><option value ="0">请选择</option>';
+                            for (var i = 0; i < data.results.length; i++) {
+                                html_de+='<option class="op" value ="'+data.results[i].id+'">'+data.results[i].name+'</option>'
+                            }
+                            html_de+='</select></div></div>';
+                            // department_id=data.results[i].id;
+                            that.parent().parent('.form-group').after(html_de);
+                        }
+                    }else{
+                        
+                    } 
+                },
+            });
+        })
+    })
+
+
+</script>
+
+</body>
+</html>

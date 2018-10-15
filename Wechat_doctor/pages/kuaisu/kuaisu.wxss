@@ -1,0 +1,121 @@
+/* pages/kuaisu/kuaisu.wxss */
+page{
+  background-color: #eee;
+}
+.title_class{
+  width: 750rpx;
+  background-color: #fff;
+  height: 50rpx;
+}
+.title_class_buzhou{
+  width: 230rpx;
+  text-align: center;
+  float: left;
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+.title_class_buzhou_click{
+  color: #1296db;
+}
+.title_class_jiantou{
+  width: 30rpx;
+  text-align: center;
+  float: left;
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+.chat{
+  width: 650rpx;
+  padding: 20rpx 50rpx;
+}
+
+.chat_other_image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  float: left;
+  background-color: #fff;
+}
+.chat_other_content{
+  float: left;
+  background: #ddd;
+  border-radius: 12rpx;
+  padding: 10rpx;
+  color: #333;
+  max-width: 450rpx;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.chat_other_triangle {
+  float: left;
+  width: 0;
+  height: 0;
+  margin-top: 20rpx;
+  border-width: 20rpx;
+  border-style: solid;
+  border-color: transparent;
+  border-right-width: 40rpx;
+  border-right-color: currentColor;
+  color: #ddd;
+}
+
+.chat_my_image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  float: right;
+  background-color: #fff;
+}
+.chat_my_content{
+  float: right;
+  background: #1296db;
+  border-radius: 12rpx;
+  padding: 10rpx;
+  color: #fff;
+  max-width: 450rpx;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.chat_my_triangle {
+  float: right;
+  width: 0;
+  height: 0;
+  margin-top: 20rpx;
+  border-width: 20rpx;
+  border-style: solid;
+  border-color: transparent;
+  border-left-width: 40rpx;
+  border-left-color: currentColor;
+  color: #1296db;
+}
+.foot{
+  position: fixed;
+  width: 750rpx;
+  background-color: #fff;
+  bottom: 0rpx; 
+}
+.foot_input{
+  width: 710rpx;
+  line-height: 80rpx;
+  font-size: 35rpx;
+  padding: 10rpx 20rpx;
+}
+.foot_class{
+  width: 750rpx;
+  font-size: 25rpx;
+  line-height: 30rpx;
+}
+.foot_shuo{
+  width: 375rpx;
+  text-align: center;
+  float: left;
+}
+.foot_class image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.foot_photo{
+  width: 375rpx;
+  text-align: center;
+  float: right;
+}

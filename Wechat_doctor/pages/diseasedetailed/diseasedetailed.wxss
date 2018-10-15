@@ -1,0 +1,75 @@
+/* pages/diseasedetailed/diseasedetailed.wxss */
+.head{
+  width: 100%;
+  height: 278rpx;
+   /* float:left;  */
+}
+.tc{
+  height: 100rpx;
+  /* background-color: #eee; */
+}
+
+.tc2{
+  height: 5rpx;
+   background-color: #eee; 
+}
+
+.tc3{
+  height: 30rpx;
+  /* background-color: #eee; */
+}
+.buttondiv{
+  width: 30%;
+  height: 80rpx;
+  /* background-color: #eee; */
+  float:left; 
+  margin-left: 24rpx;
+}
+
+.button{
+  width: 80%; 
+  height: 50rpx;
+  border:3rpx solid #e7e6fc;
+}
+
+.buttontext{
+  text-align:center;
+  border-radius:30rpx;
+  font-size:26rpx;
+  color: #65c0ba;
+}
+
+.titlediv{
+  width: 100%;
+  height: 100rpx;
+  display:flex;
+align-items:center;
+justify-content:center;
+  /* background-color: blue; */
+
+}
+
+.contentdiv{
+  width: 100%;
+  display:flex;
+align-items:center;
+justify-content:center;
+  /* background-color: blue; */
+
+}
+
+.titletextdiv{
+  width: 90%;
+  
+  /* text-align: left; */
+}
+
+.contenttextdiv{
+  width: 90%;
+  border-radius:30rpx;
+  font-size:26rpx;
+  color: #65c0ba;
+
+  
+  /* text-align: left; */
+}

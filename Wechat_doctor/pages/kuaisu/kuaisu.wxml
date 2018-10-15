@@ -1,0 +1,32 @@
+<view class='title_class'>
+  <view class='title_class_buzhou title_class_buzhou_click'>导诊</view>
+  <view class='title_class_jiantou'>〉</view>
+  <view class='title_class_buzhou'>诊断</view>
+  <view class='title_class_jiantou'>〉</view>
+  <view class='title_class_buzhou'>送药</view>
+</view>
+<view class='chat'>
+  <view class='chat_other'>
+    <image class='chat_other_image' src='/images/yezi.png'></image>
+    <view class='chat_other_triangle'></view>
+    <view class='chat_other_content'>您好，我是您的医疗小助手，我将根据您的描述为您安排合适的医生。请问您要咨询什么问题？</view>
+  </view>
+  <view class='chat_my'>
+    <image class='chat_my_image' src='/images/yezi.png'></image>
+    <view class='chat_my_triangle'></view>
+    <view class='chat_my_content'>您好，我是您的医疗小助手，我将根据您的描述为您安排合适的医生。请问您要咨询什么问题？</view>
+  </view>
+</view>
+<view class='foot'>
+  <input class='foot_input' confirm-type='send' placeholder='请输入您的病症描述，描述越细，推荐越准'></input>
+  <view class='foot_class'>
+    <view class='foot_shuo'>
+      <image src='/images/luyin.png'></image>
+      <view>语音识别</view>
+    </view>
+    <view class='foot_photo'>
+      <image src='/images/tupian.png'></image>
+      <view>上传图片</view>
+    </view>
+  </view>
+</view>

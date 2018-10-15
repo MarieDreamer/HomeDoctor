@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>后台</title>
+    <!--[if lt IE 8]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <link href="/Css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="/Css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="/Css/animate.min.css" rel="stylesheet">
+    <link href="/Css/style.min.css?v=4.0.0" rel="stylesheet">
+    <link href="/Css/paging.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <!-- Panel Other -->
+    <div class="ibox float-e-margins">
+        
+        <div class="ibox-content">
+            <div class="row row-lg">
+                <div class="col-sm-12">
+                    <!-- Example Toolbar -->
+                    <div class="example-wrap">
+                        <div class="example">
+                            <div class="btn-group" role="group">
+                                <a href="/EmployeeSystem/adds" class="btn btn-outline btn-default">
+                                    <i class="glyphicon glyphicon-plus" aria-hidden="true"></i> 增加
+                                </a>
+                                <a class="btn btn-outline btn-default" target="ajaxTodo" title="确定要删除吗?" id="delete_more">
+                                    <i class="glyphicon glyphicon-trash" aria-hidden="true"></i> 删除
+                                </a>
+                                 <!--<a id="employee_system_batch_delete" class="icon btn btn-outline btn-default" href="javascript:void(0);" attr_href="/EmployeeSystem/batch_dele_do" target="ajaxTodo" title="确定要批量删除吗?"><span><i class="glyphicon glyphicon-remove" aria-hidden="true"></i> 批量删除</span></a>
+
+                                <form id="searchForm" onsubmit="return navTabSearch(this);" action="/EmployeeSystem/lists" method="post" rel="pagerForm">
+                                    <div class="searchBar">
+                                        帐号：<input type="text" name="account" value="{:I('param.account')}" />
+                                            姓名：<input type="text" name="name" value="{:I('param.name')}" />
+                                       <button type="submit">检索</button>
+                                    </div>
+                                </form> -->
+                            </div>
+                            <table data-toggle="table" class="table table-hover"  data-mobile-responsive="true">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" class="checkboxCtrl"></th>
+										<th>ID</th>
+										<th>帐号</th>
+										<th>姓名</th>
+                                        <th>排序</th>
+                                        <th>部门</th>
+                                        <th>角色</th>
+										<th>创建时间</th>
+										<th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+									<volist name="results" id="vo">
+                                        <tr target="sid_user" rel="{$vo['id']}">
+                                            <td><input name="ids" value="{$vo['id']}" type="checkbox"></td>
+                                            <td class="id">{$vo['id']}</td>
+                                            <td>{$vo['account']}</td>
+                                            <td >{$vo['name']}</td>
+                                            <td slign="center">{$vo['sort']}</td>
+                                            <td >{$vo['department_name']}</td>
+                                            <td >{$vo['role_name']}</td>
+                                            <td slign="center">{$vo["create_time"]|date="Y-m-d H:i:s",###}</td>
+                                            <td>
+                                                <a class="btnDel">删除</a> |
+                                                <a href="/EmployeeSystem/edit?id={$vo['id']}">编辑</a>
+                                            </td>
+                                        </tr>
+                                        </volist>
+                                </tbody>
+                            </table>
+                           <div class="paggings">
+                           {$paging}
+                        </div>
+                    </div>
+                </div>    
+                    <!-- End Example Toolbar -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<script src="/Js/jquery.min.js?v=2.1.4"></script>
+<script type="text/javascript">
+    $(".checkboxCtrl").click(function() {
+        $("input[name='ids']").prop("checked", this.checked);
+    });
+      
+    $("input[name='ids']").click(function() {
+        var $ids = $("input[name='ids']");
+        $(".checkboxCtrl").prop("checked" , $ids.length == $ids.filter(":checked").length ? true :false);
+    });
+    $(document).on('click','.btnDel',function(){
+        var id=$(this).parent().siblings('.id').text();
+        $.ajax({
+            url:'/EmployeeSystem/dele_do', 
+            data:{
+                "id":id,
+            },
+            type:'post',
+            dataType:"json",
+            success:function(data){
+                if(data.status){
+                    alert('删除成功');
+                    window.location="/EmployeeSystem/lists";
+                }else{
+                    alert(data.message)
+                }
+            },
+        });
+    })
+    $(document).on('click','#delete_more',function(){
+        var ids='';
+        $("input[name='ids']:checked").each(function(){
+            ids=ids+'_'+$(this).val();
+        });
+        $.ajax({
+            url:'/EmployeeSystem/batch_dele_do', 
+            data:{
+                "ids":ids,
+            },
+            type:'post',
+            dataType:"json",
+            success:function(data){
+                if(data.status){
+                    alert('删除成功');
+                    window.location="/EmployeeSystem/lists";
+                }else{
+                    alert(data.message)
+                }
+            },
+        });
+    })
+</script>
+
+</body>

@@ -1,0 +1,70 @@
+/* page{
+  background-color: #eee;
+} */
+.doctordiv{
+  width: 700rpx;
+  height: 150rpx;
+  border-top:4px solid #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  padding: 25rpx;
+}
+
+.doctortitle{
+  width: 100%;
+  display: flex;
+}
+
+.doctorimgdiv{
+  width:100rpx;
+  height:100rpx;
+}
+
+.doctorimg{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 100%;
+}
+.doctor_right{
+  display:flex;
+  flex-direction:column;
+  margin-left:20rpx;
+  align-items: flex-start;
+}
+.doctorname{
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.doctortext{
+  text-align: left;
+  line-height: 50rpx;
+  padding: 0 10rpx;
+  border-radius: 5rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #1296db;
+}
+
+.doctortextdiv{
+  width: 100%;
+  /* margin-top: 10rpx; */
+}
+
+.doctorintroduce{
+   /* margin-top: 10rpx;  */
+  line-height: 25rpx;
+  font-size: 25rpx;
+  word-wrap:break-word;
+  overflow: hidden;
+  color: #aaa;
+  height: 25rpx;
+  margin-top:20rpx;
+}
+
+.tc{
+  height: 30rpx;
+  width: 100%;
+  /* border-bottom:2px solid #f5f5f5; */
+
+}

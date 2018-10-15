@@ -1,0 +1,37 @@
+
+    <view class='orderdiv'  >
+      <view class='ordernamediv'>
+        <view class='orderimg'>
+          <image class='headimg' src="/images/wode_hei.png"></image>
+        </view>
+        <view class='nametext'>姓名:{{name}}</view>
+        <view class='agetext'>年龄：{{age}}</view>
+        <view class='sextext'>性别：{{sex}}</view>
+      </view>
+      <view class='order-text'  >
+        <view class='symptomtext'>科别：神经内科</view>
+        <view class='tc2'></view>
+        <view class='symptomtext'>既往史：{{history}}</view>
+        <view class='tc2'></view>
+        <view class='symptomtext'>个人史：{{personal}}</view>
+        <view class='tc2'></view>
+        <view class='symptomtext'>联系方式：{{phone}}</view>
+        <view class='tc2'></view>
+        <view class='symptomtext'>症状：{{disease}}</view>
+        <!-- <view class='tc2'></view>
+        <view class='symptomtext'>初步诊断：啊啊啊啊啊啊啊啊啊啊啊</view> -->
+        <!-- <view class='tc2'></view>
+        <view class='symptomtext'>用药：啦啦啦啦啦啦啦</view> -->
+        <view class='tc2'></view>
+        <view class='symptomtext'>地址：{{addres}}</view>
+        <view class='tc2'></view>
+      </view>
+      <!-- 接单按钮 -->
+      <view class='jiedan' name='id' catchtap='submit' data-st='{{list.id}}' data-user='{{list.name}}' >
+        <view class='jiedan-text'>接单</view>
+      </view>
+      <!-- <view class='jiedan' name='id' catchtap='submit' data-st='{{list.id}}' data-user='{{list.name}}' >
+        <view class='jiedan-text'>正在处理</view>
+      </view> -->
+
+    </view>

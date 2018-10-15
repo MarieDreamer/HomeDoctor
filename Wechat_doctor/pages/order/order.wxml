@@ -1,0 +1,46 @@
+<!--pages/order/order.wxml-->
+<view wx:if="{{show1}}" wx:for="{{addressarray}}" wx:for-item="lists" wx:key="keys" class='addresdiv'>
+  <view class='tc'></view>
+  <view   class='addrescontent'>
+    <view class='namediv'>姓名：{{lists.name}}</view>
+    <view class='phonediv'>{{lists.phone}}</view>
+  </view>
+  <view class='addres'>地址：{{lists.province}}{{lists.city}}{{lists.region}}{{lists.address}}</view>
+    <view catchtap="goaddress" class='addresright'>点击修改</view>
+</view>
+
+<view wx:if="{{show2}}" class='addresdiv'>
+  <view class='tc2'></view>
+  <view class='addbutton'>
+    <view catchtap ="goaddress" class='buttontext'>你还没有地址,去管理地址</view>
+  </view>
+</view>
+
+<view wx:for="{{doctorarray}}" wx:for-item="list" wx:key="key" class='doctordiv'>
+<view class='tc'></view>
+  <view class='doctor'>
+    <view class='doctornamediv'>医生姓名：{{list.realname}}
+      <view class='hospitaldiv'>{{list.hospital}}</view>
+    </view>
+    <view class='doctortextdiv'>职称：{{list.grade}}</view>
+    <view class='doctortextdiv'>擅长：{{list.introduce}}</view>
+    
+  </view>
+</view>
+
+<view class='xian'></view>
+
+<view class='formdiv'>
+  <view class='filldiv'>
+    <input bindinput ="inputcontentfun"  placeholder="输入病症" class='fillinputdiv'></input>
+  </view>
+</view>
+
+<view class='buttondiv'>
+  <view  class='button'>
+    <view catchtap="tijiaofun" class='buttontext'>提交</view>
+  </view>
+</view>
+<!-- <view class='querydiv'></view> -->
+
+

@@ -1,0 +1,17 @@
+/* pages/invite/invite.wxss */
+.ipt{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.sudo{
+  width:90%;
+  height: 100rpx;
+  background-color:rgb(247,247,247);
+}
+.btn_next{
+  width: 90%;
+  margin-top: 40rpx;
+  color: white;
+  background-color:rgb(47, 204, 113); 
+}

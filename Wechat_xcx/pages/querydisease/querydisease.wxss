@@ -1,0 +1,95 @@
+/* pages/querydisease/querydisease.wxss */
+
+.search {
+    position: fixed;
+    left: 6%;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 650rpx;
+    height: 55rpx;
+    background: #f5f5f5;
+    border-radius: 30rpx;
+    font-size: 26rpx;
+}
+
+.search-rt {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search-image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+}
+
+.selectquery{
+  width: 100%;
+  height: 200rpx;
+  /* background-color: blue; */
+}
+
+.tc{
+  height: 100rpx;
+  /* background-color: #eee; */
+}
+
+.tc2{
+  height: 5rpx;
+   background-color: #eee; 
+}
+
+.tc3{
+  height: 30rpx;
+  /* background-color: #eee; */
+}
+.selectdiv{
+  float:left;
+  text-align:center;
+  width: 33%;
+  height: 200rpx;
+  
+  
+}
+.selectimg{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+
+.selecttext{
+  border-radius: 30rpx;
+  font-size: 26rpx;
+}
+
+.selectresult{
+  width: 100%;
+   float:left; 
+   
+}
+
+.selectover{
+  float:left; 
+  /* background-color: #eee; */
+   height: 80rpx; 
+  width: 30%;
+  margin-left: 24rpx;
+}
+
+.selectbu{
+   width: 80%; 
+  height: 50rpx;
+  border:3rpx solid #e7e6fc;
+}
+
+.selectbutext{
+  text-align:center;
+  border-radius:30rpx;
+  font-size:26rpx;
+  color: #65c0ba;
+
+}

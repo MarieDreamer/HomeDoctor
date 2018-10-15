@@ -1,0 +1,9 @@
+<!--pages/introduction/introduction.wxml-->
+<view class='div'>
+  <view class='title'>家庭医生功能介绍</view>
+  <view class='introduction'>
+    <view class='function'>功能1</view>
+    <view class='function'>功能2</view>
+    <view class='function'>功能3</view>
+  </view>
+</view>

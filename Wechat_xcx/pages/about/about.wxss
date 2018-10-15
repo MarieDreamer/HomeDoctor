@@ -1,0 +1,36 @@
+.logodiv{
+  height: 300rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.logoimg{
+  height: 150rpx;
+  width: 150rpx;
+  margin-top: 70rpx;
+}
+
+.aboutdiv{
+  height: 240rpx;
+  width: 100%;
+  border-bottom:2px solid #f5f5f5;
+  border-top:2px solid #f5f5f5;
+}
+
+.about{
+  width: 90%;
+  height: 80rpx;
+  margin: 0 auto;
+  /* border-bottom:2px solid #f5f5f5; */
+}
+
+.abouttext{
+  font-size: 28rpx;
+  line-height: 80rpx;
+}
+
+.xian{
+  width: 90%;
+  margin: 0 auto;
+  border-bottom:2px solid #f5f5f5;
+}

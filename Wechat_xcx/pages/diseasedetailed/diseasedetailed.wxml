@@ -1,0 +1,70 @@
+<!--pages/diseasedetailed/diseasedetailed.wxml-->
+<view class='head'>
+<view class='tc3'></view>
+
+  <view class='buttondiv'>
+    <view bindtap='contentfun' data-id='summarize' class='button'>
+    <view class='buttontext'>简介</view>
+    </view>
+  </view>
+
+  <view class='buttondiv'>
+    <view bindtap='contentfun' data-id='pathogenesis' class='button'>
+    <view class='buttontext'>病因</view>
+    </view>
+  </view>
+
+  <view class='buttondiv'>
+    <view bindtap='contentfun' data-id='symptoms' class='button'>
+    <view class='buttontext'>症状</view>
+    </view>
+  </view>
+
+  <view class='buttondiv'>
+    <view bindtap='contentfun' data-id='diagnosis' class='button'>
+    <view class='buttontext'>诊断</view>
+    </view>
+  </view>
+
+  <view class='buttondiv'>
+    <view bindtap='contentfun' data-id='treatment' class='button'>
+    <view class='buttontext'>治疗</view>
+    </view>
+  </view>
+
+  <view class='buttondiv'>
+    <view bindtap='contentfun' data-id='prevention' class='button'>
+    <view class='buttontext'>预防</view>
+    </view>
+  </view>
+
+  <view class='buttondiv'>
+    <view bindtap='contentfun' data-id='life' class='button'>
+    <view class='buttontext'>生活</view>
+    </view>
+  </view>
+
+  <view class='buttondiv'>
+    <view bindtap='contentfun' data-id='drug' class='button'>
+    <view class='buttontext'>药品</view>
+    </view>
+  </view>
+
+
+</view>
+<view class='tc2'></view>
+
+<view class='titlediv'>
+  <view class='titletextdiv'>
+  名称：{{name}}
+  </view>
+</view>
+
+<view class='tc2'></view>
+<view class='contentdiv'>
+
+  <view class='contenttextdiv'>
+    {{diseasecontent}}
+  </view>
+</view>
+

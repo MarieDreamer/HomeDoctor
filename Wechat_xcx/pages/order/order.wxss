@@ -1,0 +1,173 @@
+/* pages/order/order.wxss */
+
+.addresdiv{
+  width: 100%;
+  height: 227rpx;
+  background-color: #eee;
+}
+
+.tc{
+  width: 100%;
+  height: 22rpx;
+}
+
+.tc2{
+  width: 100%;
+  height: 59rpx;
+}
+
+
+.addrescontent{
+  /* height: 100%; */
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.namediv{
+  float: left;
+  font-size:32rpx;
+  /* font-weight:bold; */
+  color: #999;
+
+}
+
+.phonediv{
+  float: right;
+  font-size:32rpx;
+  /* font-weight:bold; */
+  color: #999;
+
+}
+
+.addres{
+  width: 95%;
+  float: left;
+  font-size:32rpx;
+  margin-top: 22rpx;
+  /* font-weight:bold; */
+  color: #999;
+  margin-left: 40rpx;
+
+}
+
+.addresright{
+  width: 78%;
+  float: right;
+  font-size:24rpx;
+  /* margin-top: 53rpx; */
+  /* font-weight:bold; */
+  color: #1296db;
+  margin-right: -443rpx;
+
+
+}
+
+.formdiv{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.filldiv{
+  height: 100rpx;
+  border-bottom:1px solid #cdd5e0;
+}
+
+.fillinputdiv{
+  height: 90rpx;
+}
+
+.doctordiv{
+  height: 232rpx;
+  width: 100%;
+  /* border-bottom:1px solid #cdd5e0; */
+  /* color: #aaa; */
+}
+
+.doctor{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.doctornamediv{
+  width: 100%;
+  float: left;
+  font-size:32rpx;
+  /* font-weight:bold; */
+}
+
+.doctortextdiv{
+  float: left;
+  font-size:25rpx;
+  color:#999;
+  width: 100%;
+  margin-top: 22rpx;
+}
+
+
+.buttondiv{
+  width: 100%;
+}
+
+.button{
+  position:fixed; 
+  bottom:0; 
+  width: 90%;
+  height: 80rpx;
+  margin: 19rpx 5%;
+  background-color: #1296db;
+  margin-top: 30rpx;
+  border-radius:15rpx;
+  text-align: center;
+  
+  
+}
+
+.buttontext{
+  font-size:36rpx;
+  color:#fff;
+  line-height: 77rpx;
+  
+}
+
+.xian{
+  border-bottom:1px solid #cdd5e0;
+  width: 90%;
+  margin: 0 auto;
+  
+
+}
+
+.hospitaldiv{
+  float: right;
+  height: 41rpx;
+  /* width: 127rpx; */
+  background-color:#1296db;
+   border-radius:15rpx; 
+  /* margin-top: 13rpx; */
+  color: #fff;
+  font-size:25rpx;
+  text-align: center;
+  line-height: 40rpx;
+  padding:5rpx 10rpx;
+
+
+
+}
+
+.jiantouimg{
+  height: 58rpx;
+  width: 64rpx;
+  margin-left: 88rpx;
+  margin-top: 28rpx;
+}
+
+.addbutton{
+  width:90%;
+  height:80rpx;
+  margin:19rpx 5%;
+  background-color:#1296db;
+  border-radius:15rpx;
+  text-align:center;
+
+}

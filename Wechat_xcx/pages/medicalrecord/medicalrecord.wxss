@@ -1,0 +1,76 @@
+.recorddiv{
+   height: 500rpx; 
+  width: 100%;
+  border-bottom:2px solid #f5f5f5;
+  border-top:2px solid #f5f5f5;
+}
+
+
+.record{
+  /* height: 80rpx; */
+  width: 90%;
+  margin: 0 auto;
+}
+
+.time{
+  float: left;
+  width: 40%;
+  height: 80rpx;
+  font-size: 25rpx;
+  text-align: left;
+  line-height: 80rpx;
+
+}
+
+.name{
+  float: left;
+  width: 30%;
+  height: 80rpx;
+  font-size: 25rpx;
+  text-align: left;
+  line-height: 80rpx;
+
+}
+.sex{
+  float: right;
+  width: 30%;
+  height: 80rpx;
+  font-size: 25rpx;
+  text-align: left;
+  line-height: 80rpx;
+
+}
+.lishi{
+  float: left;
+  width: 60%;
+  height: 80rpx;
+  font-size: 25rpx;
+  text-align: left;
+  line-height: 80rpx;
+  
+}
+
+.personal{
+  float: left;
+  width: 70%;
+  /* height: 80rpx; */
+  font-size: 25rpx;
+  text-align: left;
+  line-height: 54rpx;
+  word-wrap:break-word;
+  }
+
+  .doctortext{
+    float: left;
+    width: 100%;
+    /* height: 80rpx; */
+    font-size: 25rpx;
+    text-align: right;
+    line-height: 54rpx;
+    word-wrap:break-word;
+  }
+
+  .tc{
+    height: 50rpx;
+    width: 100%;
+  }

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>后台</title>
+    <link href="/Css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="/Css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="/Css/animate.min.css" rel="stylesheet">
+    <link href="/Css/style.min.css?v=4.0.0" rel="stylesheet">
+
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                	<div class="form-horizontal m-t" id="commentForm">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">账号：</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="account" size="80" class="form-control" minlength="6" maxlength="60" id="account" value="{$result.account}"/>
+                                <span class="info"> 请输入6-20字符 密码默认123456</span>
+                            </div>
+                        </div>
+                       	<div class="form-group">
+                            <label class="col-sm-2 control-label">姓名：</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="name" size="20" class="form-control" minlength="2" maxlength="10" id="name" value="{$result.name}"/>
+                                <span class="info"> 请输入2-10字符</span>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                            <label class="col-sm-2 control-label">密码：</label>
+                            <div class="col-sm-8">
+                                <input type="password" name="password" size="20" class="form-control" minlength="2" maxlength="10" id="password" value="{$result.password}"/>
+                                <span class="info"> 请输入6-10字符</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">排序：</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="sort" class="form-control" minlength="2" maxlength="4"  value="{$result.sort}" id="sort"/>
+                                <span class="info">请输入1-4位数字</span>
+                            </div>
+                        </div>
+                        <div class="form-group rem" attr_value='1' >
+                            <label class="col-sm-2 control-label">部门：</label>
+                            <div class="col-sm-8">
+                                    <select class="form-control department" >
+                                        <option value ="-1">请选择</option>
+                                        <?php foreach ($department as $key => $value) {?>
+                                        <option class="op" value ="<?php echo $value['id'];?>">
+                                        <?php echo $value['name'];?>
+                                        </option>
+                                    <?php } ?>
+                                    </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">角色：</label>
+                            <div class="col-sm-8">
+                                    <select class="role form-control">
+                                    <?php foreach ($role as $key => $value) {?>
+                                        <option value ="<?php echo $value['id'];?>">
+                                            <?php echo $value['name'];?>
+                                        </option>
+                                    <?php } ?>
+                                    </select>
+                            </div>
+                        </div>
+                            <div class="col-sm-4 col-sm-offset-3">
+                                <button class="btn btn-primary" type="button" id="adds">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+       
+    </div>
+</div>
+<input type="hidden" value="{$result.id}" id="id">
+
+<script src="/Js/jquery.min.js?v=2.1.4"></script>
+<script type="text/javascript">
+	 $(function(){
+        $(document).on('click','#adds',function(){
+            var id=$('#id').val();
+            var account=$('#account').val();
+            var name=$('#name').val();
+            var password=$('#password').val();
+            var sort=$('#sort').val();
+            var department_id=$('.department option:selected').val();
+            var role_id=$('.role option:selected').val();
+            var max_department_id=-1;
+             $(".op").each(function(){
+                department_id=$(this).attr('value');
+                if(department_id>=max_department_id){
+                    max_department_id=department_id;
+                }
+            });
+            $.ajax({
+                url:'/EmployeeSystem/edit_do', 
+                data:{
+                    "id":id,
+                    "account":account,
+                    "name":name,
+                    "password":password,
+                    "sort":sort,
+                    "department_id":department_id,
+                    "role_id":role_id
+                },
+                type:'post',
+                dataType:"json",
+                success:function(data){
+                    if(data.status){
+                        alert('修改成功');
+                        window.location="/EmployeeSystem/lists";
+                    }else{
+                        alert(data.message)
+                    }
+                },
+            });
+        })
+
+        $(document).on('change','.department',function(){
+            var that=$(this)
+            var attr_value=that.parent().parent('.form-group').attr('attr_value');
+            console.log(attr_value);
+            
+            $(".rem").each(function(){
+                attrvalue=$(this).attr("attr_value");
+                // console.log(attrvalue);
+                if (attrvalue>attr_value) {
+                    $(this).remove();
+                };
+            });
+            var department_id=$(this).val();
+            attr_value++;
+            $.ajax({
+                url:'/Department/get_do', 
+                data:{
+                    "department_id":department_id
+                },
+                type:'post',
+                dataType:"json",
+                success:function(data){
+                    if(data.status){
+                        if (data.results) {
+                            console.log(data);
+                           var html_de='<div class="form-group rem" attr_value='+attr_value+'><label class="col-sm-2 control-label"></label><div class="col-sm-8"><select class="form-control department"><option value ="0">请选择</option>';
+                            for (var i = 0; i < data.results.length; i++) {
+                                html_de+='<option class="op" value ="'+data.results[i].id+'">'+data.results[i].name+'</option>'
+                            }
+                            html_de+='</select></div></div>';
+                            // department_id=data.results[i].id;
+                            that.parent().parent('.form-group').after(html_de);
+                        }
+                    }else{
+                        
+                    } 
+                },
+            });
+        })
+    })
+</script>
+</body>
+</html>

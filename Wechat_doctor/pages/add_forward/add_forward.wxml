@@ -1,0 +1,36 @@
+<view class='page'>
+  <textarea class='text' bindinput="input" placeholder="{{text}}" auto-height/>
+  <view class='content' wx:if="{{forward.f_con}}">
+      {{forward.content}}
+      <view style='display:flex' wx:for="{{forward.f_con}}" wx:for-item="con"> 
+        //
+        <span style="color:blue">@{{con[0]}}</span>
+        : {{con[1]}}
+      </view>
+    </view>
+  <view class="forward" wx:if="{{forward.forward}}">
+    <view class="forward_head">
+      <view style='color:blue'>@{{forward.forward.user_name}}</view>
+      <view> : {{forward.forward.content}}</view>  
+    </view>
+    <view class="forward_image">
+      <view class='forward_item' wx:for="{{forward.forward.images}}" wx:for-index="index" style="{{index==2||index==5||index==8?'width:206rpx':''}}">
+        <image class="forward_img" src="http://wechat.homedoctor.jianfengweb.com{{item}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="forward" wx:else>
+    <view class="forward_head">
+      <view style='color:blue'>@{{forward.name}}</view>
+      <view> : {{forward.content}}</view>  
+    </view>
+    <view class="forward_image">
+      <view class='forward_item' wx:for="{{forward.img}}" wx:for-index="index" style="{{index==2||index==5||index==8?'width:206rpx':''}}">
+        <image class="forward_img" src="http://wechat.homedoctor.jianfengweb.com{{item}}"></image>
+      </view>
+    </view>
+  </view>
+  
+  <button bindtap="send" >发布</button>
+</view>

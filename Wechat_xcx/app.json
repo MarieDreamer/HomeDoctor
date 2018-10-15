@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/community/community",
+    "pages/my_moments/my_moments",
+    "pages/add_forward/add_forward",
+    "pages/myfollow/myfollow",
+    "pages/index/index",
+    "pages/personalinfo/personalinfo",
+    "pages/comment_detail/comment_detail",
+    "pages/person_detail/person_detail",
+    "pages/feedback/feedback",
+    "pages/introduction/introduction",
+    "pages/medicalrecord/medicalrecord",
+    "pages/about/about",
+    "pages/myorder/myorder",
+    "pages/mydoctor/mydoctor",
+    "pages/address/address",
+    "pages/order/order",
+    "pages/myself/myself",
+    "pages/add_moments/add_moments",
+    "pages/login/login",
+    "pages/zhongyi/zhongyi",
+    "pages/kuaisu/kuaisu",
+    "pages/invite/invite",
+    "pages/shangmen/shangmen",
+    "pages/disease/disease",
+    "pages/querydisease/querydisease",
+    "pages/diseaselookup/diseaselookup",
+    "pages/diseasedetailed/diseasedetailed",
+    "pages/logs/logs",
+    "pages/update/update"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/shouye_hei.png",
+        "selectedIconPath": "images/shouye.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "images/baguan_hei.png",
+        "selectedIconPath": "images/baguan.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "iconPath": "images/wode_hei.png",
+        "selectedIconPath": "images/wode.png"
+      }
+    ],
+    "borderStyle": "white",
+    "color": "#999999",
+    "selectedColor": "#333333",
+    "backgroundColor": "#ffffff"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "家庭医生",
+    "navigationBarTextStyle": "black"
+  }
+}

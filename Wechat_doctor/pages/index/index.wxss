@@ -1,0 +1,129 @@
+page{
+  background-color: #F1F1F1;
+}
+.orderchoicediv{
+  height: 80rpx;
+  width: 100%;
+}
+
+.orderchoice{
+  background-color: white;
+  width: 33%;
+  float: left;
+  height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border-bottom:2px solid rgb(231, 232, 236);
+  line-height: 80rpx;
+}
+
+.orderchoiceblue{
+  background-color: white;
+  width: 33%;
+  float: left;
+  height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border-bottom:2px solid #1296db;
+  line-height: 80rpx;
+}
+
+.orderdiv{
+  width: 700rpx;
+  margin: 25rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  color: black;
+  font-size: 30rpx;
+  box-shadow: #bbb 0rpx 0rpx 20rpx;
+}
+
+.tc{
+  height: 10rpx;
+  width: 100%;
+}
+
+.ordernamediv{
+  height: 130rpx;
+  width: 85%;
+  margin:0 auto;
+  }
+
+  .orderimg{
+    float: left;
+    height: 130rpx;
+    width: 20%;
+
+  }
+
+  .headimg{
+    height: 80rpx;
+    width: 80rpx;
+    margin-top: 34rpx;
+    /* margin-left: 10rpx; */
+  }
+
+  .nametext{
+    float: left;
+    height: 130rpx;
+    width: 25%;
+    font-size: 25rpx;
+    line-height: 138rpx;
+  }
+
+  .agetext{
+    float: left;
+    height: 130rpx;
+    width: 30%;
+    font-size: 25rpx;
+    line-height: 138rpx;
+    text-align: center;
+  }
+
+  .sextext{
+    float: right;
+    height: 130rpx;
+    width: 20%;
+    font-size: 25rpx;
+    line-height: 138rpx;
+  }
+
+  .symptomtext{
+    /* height:80rpx; */
+    width:90%;
+    margin:0 auto;
+    font-size: 25rpx;
+    /* line-height: 80rpx; */
+    word-wrap:break-word;
+    margin-left: 60rpx;
+
+  }
+
+  .tc2{
+    height: 27rpx;
+    width: 100%;
+  }
+  .order-text{
+    width: 100%;
+  }
+  /* 接单按钮 */
+  .jiedan{
+    background-color: #1296db;
+    color: white;
+    height: 80rpx;
+    text-align: center;
+    font-size: 35rpx;
+    line-height: 80rpx;
+    border-top: 2rpx solid #eee;
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+  }
+  .display{
+    display: none;
+  }
+  .order-button{
+    background-color: #1296db;
+    color: white;
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+  }

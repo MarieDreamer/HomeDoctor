@@ -1,0 +1,43 @@
+<view class="section">
+  <scroll-view scroll-y style="height: {{windowHeight}}px; " bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="200">
+
+    <!-- <view class='choicediv'>
+      <view class='choicetextdiv'>A </view>
+    </view> -->
+    <view wx:if="{{show3}}" bindtap='{{queryfun}}' class='choicediv' data-zm='{{list}}' wx:for="{{keyquery}}" wx:for-item="list" wx:key="key">
+      <view class='choicetextdiv'>{{list}} </view>
+    </view>
+
+    <view wx:if="{{show4}}" bindtap='{{queryfun}}' class='choicediv' data-st='{{list.id}}' wx:for="{{keyquery}}" wx:for-item="list" wx:key="key">
+      <view class='choicetextdiv'>{{list.name}} </view>
+    </view>
+
+
+
+
+    
+    
+    <view id="red"  class="scroll-view-item bc_red"></view>
+  </scroll-view>
+
+</view>
+
+<view class="sectionright">
+  <scroll-view scroll-y style="height: {{windowHeight}}px; " bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+     <view bindtap='sonfun' wx:if="{{show1}}"  data-diseaseid='{{lists.id}}' wx:for="{{sonarray}}" wx:for-item="lists" wx:key="keys" class='choicerightdiv'>
+      <view class='choicetextdiv' >{{lists.name}} </view>
+    </view> 
+
+    <view bindtap=''  wx:if="{{show2}}" class='choicerightdiv'>
+      <view class='choicetextdiv'>{{promptarray}}</view>
+    </view> 
+
+    <view bindtap='departmentsun' wx:if="{{show5}}"  data-diseaseid='{{lists.id}}' wx:for="{{sonarray}}" wx:for-item="lists" wx:key="keys" class='choicerightdiv'>
+      <view class='choicetextdiv' >{{lists.name}} </view>
+    </view>
+
+    
+    <view id="red"  class="scroll-view-item bc_red"></view>
+  </scroll-view>
+
+</view>

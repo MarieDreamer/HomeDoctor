@@ -1,0 +1,36 @@
+<view class=''>
+  <view class='tc'></view>
+    <view catchtap="gopatient_case" class='orderdiv'>
+      <view class='ordernamediv'>
+        <view class='orderimg'>
+          <image class='headimg' src="/images/wode_hei.png"></image>
+        </view>
+        <view class='nametext'>姓名X</view>
+        <view class='agetext'>年龄：22</view>
+        <view class='sextext'>性别：女</view>
+      </view>
+      <view class='tc2'></view>
+      <view class='symptomtext'>地址：浙江省杭州市江干区XX路111号</view>
+      <view class='tc2'></view>
+      <view class='symptomtext'>最近接诊：2018-02-12</view>
+      <view class='tc2'></view>
+    </view>
+</view> 
+<view class=''>
+  <view class='tc'></view>
+    <view class='orderdiv'>
+      <view class='ordernamediv'>
+        <view class='orderimg'>
+          <image class='headimg' src="/images/wode_hei.png"></image>
+        </view>
+        <view class='nametext'>姓名X</view>
+        <view class='agetext'>年龄：22</view>
+        <view class='sextext'>性别：女</view>
+      </view>
+      <view class='tc2'></view>
+      <view class='symptomtext'>地址：浙江省杭州市江干区XX路111号</view>
+      <view class='tc2'></view>
+      <view class='symptomtext'>最近接诊：2018-02-12</view>
+      <view class='tc2'></view>
+    </view>
+</view> 

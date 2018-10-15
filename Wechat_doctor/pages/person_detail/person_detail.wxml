@@ -1,0 +1,72 @@
+<view class='page'>
+<view class='user_card' style='background-image:url("../../images/ys1.jpg")'>
+</view>
+<view class='user_content'>
+    <image class='user_img' src='{{user.imageurl}}'></image>
+    <view class='user_name'>{{user.nickname}}</view>
+    <view class='user_fanfollow'>关注: {{user.follow_num}} | 粉丝: {{user.fan_num}}</view>
+    <view class='user_introduce'>简介：{{user.introduce}}</view>
+</view>
+<view class='body_view' wx:for="{{moments}}" wx:for-index="i">
+<view class='view_header'>
+    <image class='view_header_img' src='{{item.user_img}}'></image>
+      <view style='display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;'>
+        <view class='view_header_list'>
+          <view class='view_header_name'>{{item.user_name}}</view>
+          <view wx:if="{{item.doctor_title}}" class='view_header_name'>{{item.create_time}}</view>
+        </view>
+        <view wx:if="{{item.doctor_title}}" class='view_header_title'>{{item.doctor_title}}</view>
+        <view wx:else class='view_header_name'>{{item.create_time}}</view>
+      </view>
+  </view>
+  <view class='view_content'>
+    <view class='content'>{{item.content}}
+      <view style='display:flex' wx:for="{{item.f_con}}" wx:for-item="con"> 
+        //
+        <span style="color:blue">@{{con[0]}}</span>
+        : {{con[1]}}
+      </view>
+    </view>
+    <view class="image_content">
+      <view class='image' wx:for="{{item.images}}" wx:for-item="image" wx:key="k" data-style="length:{{item.images.length}};{{index}}">
+        <image class="moment_img" src="http://wechat.homedoctor.jianfengweb.com{{image}}"></image>
+      </view>
+    </view>
+    <view class="forward" wx:if="{{item.forward}}">
+      <view class="forward_head">
+        <view style='color:blue'>@{{item.forward.user_name}}</view>
+        <view> : {{item.forward.content}}</view>
+      </view>
+      <view class="forward_image">
+        <view class='forward_item' wx:for="{{item.forward.images}}" wx:for-index="index" wx:for-item="i" style="{{index==2||index==5||index==8?'width:206rpx':''}}">
+          <image class="forward_img" src="http://wechat.homedoctor.jianfengweb.com{{i}}"></image>
+        </view>
+      </view>
+    </view>
+     
+  </view>
+  <view class='view_foot' bindtap='forward' data-id="{{item.id}}" data-name="{{item.user_name}}" data-content="{{item.content}}" data-img="{{item.images}}">
+    <view class='view_foot_li'>
+      <image class='view_foot_image' src='/images/fenxiang.png'></image>
+      <view class='view_foot_text'>
+        <text>{{item.forward_num}}</text>
+      </view>
+    </view>
+    <view class='view_foot_li' bindtap='comment_detail' data-id="{{item.id}}">
+      <image class='view_foot_image' src='/images/xiaoxi.png'></image>
+      <view class='view_foot_text'>
+        <text>{{item.comment_num}}</text>
+      </view>
+    </view>
+    <view class='view_foot_li' bindtap='like' data-id="{{item.id}}" data-index="{{i}}">
+      <image wx:if="{{moments_like[i][0] == 1}}" class='view_foot_image' src='/images/zanY.png'></image>
+      <image wx:if="{{moments_like[i][0] == 2}}" class='view_foot_image' src='/images/zan.png'></image>
+      <view class='view_foot_text'>
+        <text>{{moments_like[i][1]}}</text>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>
+
+<view class='bottom_text' style="display:{{show_bottom?'block':'none'}}">—— 到底了 ——</view>

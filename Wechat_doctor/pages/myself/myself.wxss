@@ -1,0 +1,37 @@
+/**index.wxss**/
+page{
+  background-color: #eee;
+}
+.user_content{
+  display: flex;
+  align-items: center;
+}
+.user_center{
+  width: 650rpx;
+  padding: 20rpx 50rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.user_center_image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+.center_lists{
+  width: 650rpx;
+  height: 50rpx;
+  padding: 20rpx 50rpx;
+  background-color: #fff;
+  border-bottom: 1rpx #aaa solid;
+}
+.center_lists_image{
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+}
+.center_lists_name{
+  float: left;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  margin-left: 30rpx;
+}

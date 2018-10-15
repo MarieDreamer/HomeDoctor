@@ -1,0 +1,49 @@
+/**index.wxss**/
+page{
+  background-color: #eee;
+}
+.title_long{
+  width: 550rpx;
+  height: 100rpx;
+  border-bottom: 1rpx solid #eee;
+  padding: 50rpx 100rpx;
+  background-color: #fff;
+}
+.title_long_image{
+  width: 100rpx;
+  height: 100rpx;
+  float: right;
+}
+.title_long_name{
+  font-size: 50rpx;
+}
+.title_long_content{
+  font-size: 30rpx;
+  color: #aaa;
+}
+.title_shot{
+  width: 375rpx;
+  height: 150rpx;
+  padding: 50rpx 0;
+  float: left;
+  text-align: center;
+  border-bottom: 1rpx solid #eee;
+  background-color: #fff;
+}
+.title_shot_image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.title_shot_name{
+  font-size: 30rpx;
+  color: #aaa;
+}
+
+.banner {
+    width: 100%;
+}
+
+.lunbotuimg{
+  width: 100%;
+  height: 500rpx;
+}

@@ -1,0 +1,12 @@
+<!--pages/update/update.wxml-->
+<view class='title'>版本历史记录</view>
+<view class='line'>
+  <view class='first'>
+    <view class='banben-num'>2.0</view>
+    <view class='banben-time'>10个月前</view>
+  </view>
+  <view class='second'>
+    <view class='one'>-iPhoneX预备好：享受转为您全新设备的屏幕而制定的优化界面</view>
+    <view class='one'>-iPhoneX预备好：享受转为您全新设备的屏幕而制定的优化界面</view>
+  </view>
+</view>

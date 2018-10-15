@@ -1,0 +1,46 @@
+page{
+  background-color: rgb(241, 242, 245)
+}
+
+.orderdiv{
+  background-color: #fff;
+  width: 100%;
+  height: 288rpx;
+  border-bottom:1px solid rgb(231, 232, 236);
+  border-top:1px solid rgb(231, 232, 236);
+}
+
+.tc{
+  width: 100%;
+  height: 50rpx;
+}
+
+.hangdiv{
+  width: 90%;
+  height: 68rpx;
+  margin: 0 auto;
+}
+
+.hangleft{
+  width: 50%;
+  float: left;
+  text-align: left;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+
+.hangright{
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+
+.dihangright{
+  width: 100%;
+  float: left;
+  text-align: right;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}

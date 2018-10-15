@@ -1,0 +1,15 @@
+<view class='doctordiv' wx:for="{{follow}}" wx:key="key" bindtap='person_detail' data-id='{{item.id}}' data-introduce="{{item.introduce}}">
+  <view class='doctortitle'>
+    <view class='doctorimgdiv'>
+      <image class='doctorimg'  src="{{item.imageurl}}"></image>
+    </view>
+    <view class='doctor_right'>
+      <view class='doctorname'>{{item.nickname}} </view>
+      <view class='doctortext'>{{item.hospital}} {{item.grade}}</view>
+    </view>
+  </view>
+  <view class='doctortextdiv'>
+    <view class='doctorintroduce'>简介：{{item.introduce}}</view>
+  </view>
+</view>
+<view style='border-top:4px solid #f5f5f5;'></view>

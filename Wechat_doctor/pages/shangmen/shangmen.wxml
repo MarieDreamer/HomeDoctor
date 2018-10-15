@@ -1,0 +1,43 @@
+<!--pages/shangmen/shangmen.wxml-->
+<view class='quick_in'>
+  <view class='quick_in_title'>快速入口</view>
+  <view class='quick_in_name'>
+    <view>感冒</view>
+    <view>发烧</view>
+    <view>咳嗽</view>
+    <view>便秘</view>
+    <view>肠胃炎</view>
+    <view>耳鸣</view>
+    <view>头晕</view>
+    <view>手足口病</view>
+    <view>食物中毒</view>
+    <view>中暑</view>
+  </view>
+</view>
+<view class='near_dor'>
+  <view class='near_dor_title'>附近的医生</view>
+  <view catchtap="goorderfun" wx:for="{{doctorarray}}" wx:for-item="lists" wx:key="keys" class='near_dor_lists' data-doctorid='{{lists.id}}'>
+    <view class='near_dor_lists_left'>
+      <image class='near_dor_lists_image' src='http://p.meifajie.com/pic/69051413852950.jpg'></image>
+    </view>
+    <view class='near_dor_lists_right'>
+      <view class='near_dor_lists_right_fisrt'>
+        <view class='near_dor_lists_right_name'>{{lists.realname}}</view>
+        <view class='near_dor_lists_right_class'>{{lists.grade}}</view>
+      </view>
+      <view class='near_dor_lists_right_second'>
+        <view class='near_dor_lists_right_haoping'>好评率</view>
+        <view class='near_dor_lists_right_haopinglu'>98.9%</view>
+        <view class='near_dor_lists_right_guanzhu'>关注数</view>
+        <view class='near_dor_lists_right_guanzhushu'>1200</view>
+      </view>
+      <view class='near_dor_lists_right_like'>擅长服务：{{lists.introduce}}</view>
+      <view class='near_dor_lists_right_third'>
+        <view class='near_dor_lists_right_title'>人气专家</view>
+        <view class='near_dor_lists_right_title'>首次免费</view>
+      <view class='near_dor_lists_right_money'>￥20.00/次</view>
+      </view>
+    </view>
+  </view>
+  
+</view>

@@ -1,0 +1,46 @@
+<view class='user_center'>
+<view class="user_content">
+  <image class='user_center_image' src="{{userimage}}" mode="cover" catchtap='gopersonalinfo'></image>
+  <view class='user_center_name'>{{username}}</view>
+</view>
+</view>
+<view catchtap="gomypatient" class='center_lists'>
+  <image class='center_lists_image' src="/images/fuwuzhong.png"></image>
+  <view class='center_lists_name'>我的病人</view>
+</view>
+<view catchtap="gomydynamic" class='center_lists'>
+  <image class='center_lists_image' src="/images/xiaoxi.png"></image>
+  <view class='center_lists_name'>我的动态</view>
+</view>
+<view catchtap="goabout" class='center_lists'>
+  <image class='center_lists_image' src="/images/shuoming.png"></image>
+  <view class='center_lists_name'>关于共享医生</view>
+</view>
+<view catchtap="gomyfollow" class='center_lists'>
+  <image class='center_lists_image' src="/images/jiaren.png"></image>
+  <view class='center_lists_name'>我的关注</view>
+</view>
+<view class='center_lists'>
+  <image class='center_lists_image' src="/images/chaxun.png"></image>
+  <view class='center_lists_name'>联系客服</view>
+</view>
+
+<view class='center_lists' bindtap='invite'>
+  <image class='center_lists_image' src="/images/yaoqingma.png"></image>
+  <view class='center_lists_name'>邀请码</view>
+</view>
+
+
+<!-- <view catchtap="gomedicalrecord" class='center_lists'>
+  <image class='center_lists_image' src="/images/bingli.png"></image>
+  <view class='center_lists_name'>病历管理</view>
+</view>
+<view catchtap ="goaddress" class='center_lists'>
+  <image class='center_lists_image' src="/images/wenben.png"></image>
+  <view class='center_lists_name'>管理地址</view>
+</view>
+<view catchtap="gomyorder" class='center_lists'>
+  <image class='center_lists_image' src="/images/wenben.png"></image>
+  <view class='center_lists_name'>我的订单</view>
+</view> -->
+

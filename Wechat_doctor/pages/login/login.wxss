@@ -1,0 +1,50 @@
+page {
+    background: #fff;
+}
+
+.paysuccess-main {
+    padding: 128rpx 140rpx 0 140rpx;
+    text-align: center;
+}
+
+.paysuc-order {
+    margin-top: 16rpx;
+    font-size: 27rpx;
+    line-height: 100rpx;
+    color: #888;
+}
+
+.avatar {
+    width: 240rpx;
+    height: 240rpx;
+    border: 1px solid #ddd;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 150rpx;
+    left: 50%;
+    margin-left: -120rpx;
+}
+
+.auth {
+    margin-top: 350rpx;
+}
+
+.pay-btn {
+    margin-top: 25rpx;
+    height: 78rpx;
+    line-height: 78rpx;
+    border: 1rpx solid #ed6d00;
+    border-radius: 5rpx;
+    font-size: 30rpx;
+}
+
+.pay-order {
+    background: #fff;
+    color: #ed6d00;
+}
+
+button::after {
+    content: none;
+}
